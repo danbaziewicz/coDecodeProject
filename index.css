@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Goldman', cursive;
 }
 
 body {
+    /* font-family: 'Goldman', cursive; */
     width: 100%;
     height: 100%;
     background-color: #000000;
-    color: #ffffff;
+    color: #808080;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 .textHeader {
@@ -21,5 +30,80 @@ body {
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 600px;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+}
+
+.text {
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+    background-color: #808080;
+    resize: none;
+}
+
+.selectionBox {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.typeClass {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.idQttDiv {
+    display: none;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.selectType {
+    background-color: #808080;
+    width: 40%;
+}
+
+.quantity {
+    background-color: #808080;
+    width: 20%;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.btnEnviar {
+    background-color: #808080;
+    width: 13%;
+    height: auto;
+}
+
+.btnEnviar:hover {
+    cursor: pointer;
+}
+
+.resultBox {
+    display: flex;
+    justify-content: center;
 }
