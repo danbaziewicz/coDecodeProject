@@ -17,13 +17,14 @@
     </header>
     <main>
         <form class="container">
+            <label class="textContLabel">Digite o texto a ser criptografado</label>
             <div class="textBox">
-                <label>Digite o texto a ser criptografado</label><br>
+                
                 <textarea placeholder="Digite aqui sua mensagem" class="text" name="texto" id="text" cl cols="70"
                     rows="6"></textarea>
-                <div id="showResult" class="resultBox">
+                <!-- <div id="showResult" class="resultBox"> -->
                     <textarea class="text" name="texto" id="textResult" cl cols="70" rows="6" readonly></textarea>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="selectionBox">
                 <div class="typeClass">
@@ -49,6 +50,15 @@
             </div>
         </form>
     </main>
+
+    <footer class="fixed-footer">
+        <span>Desenvolvido por <a href="https://www.linkedin.com/in/danbaziewicz/">Danylo Baziewicz</a> - Para fins
+            estritamente didáticos.</span>
+        <!-- <div class="footerFlex">
+            <img class="footerIcon" src="./imgs/linkedin.png" alt="linkedin icon">
+            <img class="footerIcon" src="./imgs/github.png" alt="github icon">
+        </div> -->
+        </footer>
     
     <script src="./index.js"></script>
 </body>

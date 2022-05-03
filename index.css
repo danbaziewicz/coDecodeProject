@@ -14,6 +14,19 @@ body {
     color: #808080;
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #215a28;;
+    border-radius: 3rem;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -37,14 +50,19 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     width: 50%;
-    height: 600px;
+    height: 500px;
+}
+
+.textContLabel {
+    text-align: center;
 }
 
 .textBox {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50%;
+    flex-direction: row;
+    /* align-items: center; */
+    width: 100%;
+    /* height: 50%; */
     justify-content: space-between;
 }
 
@@ -53,19 +71,22 @@ main {
     border-radius: 30px;
     background-color: #808080;
     resize: none;
+    width: 49%;
 }
 
 .selectionBox {
     width: 100%;
-    height: 5%;
+    height: 10%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .typeClass {
     display: flex;
-    justify-content: space-evenly;
     width: 40%;
+    align-items: center;
+    flex-direction: column;
 }
 
 .idQttDiv {
@@ -73,6 +94,8 @@ main {
     justify-content: center;
     justify-content: space-evenly;
     width: 40%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .selectType {
@@ -94,7 +117,7 @@ main {
 
 .btnEnviar {
     background-color: #808080;
-    width: 13%;
+    width: 20%;
     height: auto;
 }
 
@@ -102,7 +125,134 @@ main {
     cursor: pointer;
 }
 
-.resultBox {
+.fixed-footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 0.8125em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #808080;
+}
+
+.footerFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footerIcon {
+    display: flex;
+    width: 10%;
+}
+
+@media (max-width: 1920px) {
+    
+    * {
+        font-size: 25px;
+    }
+
+    .container {
+        height: 900px;
+    }
+}
+
+@media (max-width: 1440px) {
+    
+    * {
+        font-size: 15px;
+    }
+
+    .container {
+        height: 500px;
+    }
+
+    .fixed-footer {
+        position: relative;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .textHeader {
+        font-size: 80px;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .textHeader {
+        font-size: 50px;
+    }
+
+    .selectionBox {
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .selectType {
+        width: 100%;
+    }
+
+    .quantity {
+        width: 50%;
+    }
+
+    .textBox {
+        flex-direction: column;
+        align-items: center;
+        height: 65%;
+    }
+
+    .text {
+        width: 80%;
+    }
+
+    .btnEnviar {
+        width: 35%;
+    }
+}
+
+@media (max-width: 400px) {
+    .textHeader {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    
+    .textHeader {
+        font-size: 35px;
+    }
+
+    .textBox {
+        height: 420px;
+    }
+
+    .typeClass {
+        width: 55%;
+    }
+
+    .idQttDiv {
+        width: 55%;
+    }
+
+    .btnEnviar {
+        width: 40%;
+        margin: 15px;
+    }
 }
