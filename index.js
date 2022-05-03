@@ -53,18 +53,18 @@ btn.addEventListener('click', function (e) {
 
 function encodeBase64(text) {
     var result = document.querySelector('#textResult');
-    outPutText = btoa(text);
-    result.innerText = outPutText;
+    outputText = btoa(text);
+    result.innerText = outputText;
 }
 
 function decodeBase64(text) {
     var result = document.querySelector('#textResult');
-    outPutText = atob(text);
-    result.innerText = outPutText;
+    outputText = atob(text);
+    result.innerText = outputText;
 }
 
 function cifraEncode(text, passo) {
-    var outPutText = '';
+    var outputText = '';
     var adjust = 0;
     var result = document.querySelector('#textResult');
     for (var i = 0; i < text.length; i++) {
@@ -72,21 +72,21 @@ function cifraEncode(text, passo) {
             adjust = (Number(text.charCodeAt(i))) - 65;
             adjust = (adjust + (Number(passo))) % 26;
             adjust += 65;
-            outPutText += String.fromCharCode(adjust);
+            outputText += String.fromCharCode(adjust);
         } else if (text.charCodeAt(i) >= 97 && text.charCodeAt(i) <= 122) {
             adjust = (Number(text.charCodeAt(i))) - 97;
             adjust = (adjust + (Number(passo))) % 26;
             adjust += 97;
-            outPutText += String.fromCharCode(adjust);
+            outputText += String.fromCharCode(adjust);
         } else {
-            outPutText += String.fromCharCode(text.charCodeAt(i));
+            outputText += String.fromCharCode(text.charCodeAt(i));
         }
     }
-    result.innerText = outPutText;
+    result.innerText = outputText;
 }
 
 function cifraDecode(text, passo) {
-    var outPutText = '';
+    var outputText = '';
     var adjust = 0;
     var result = document.querySelector('#textResult');
     for (var i = 0; i < text.length; i++) {
@@ -94,15 +94,15 @@ function cifraDecode(text, passo) {
             adjust = (Number(text.charCodeAt(i))) - 65;
             adjust = (adjust - (Number(passo - 26))) % 26;
             adjust += 65;
-            outPutText += String.fromCharCode(adjust);
+            outputText += String.fromCharCode(adjust);
         } else if (text.charCodeAt(i) >= 97 && text.charCodeAt(i) <= 122) {
             adjust = (Number(text.charCodeAt(i))) - 97;
             adjust = (adjust - (Number(passo - 26))) % 26;
             adjust += 97;
-            outPutText += String.fromCharCode(adjust);
+            outputText += String.fromCharCode(adjust);
         } else {
-            outPutText += String.fromCharCode(text.charCodeAt(i));
+            outputText += String.fromCharCode(text.charCodeAt(i));
         }
     }
-    result.innerText = outPutText;
+    result.innerText = outputText;
 }
