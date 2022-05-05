@@ -23,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #215a28;;
+    background-color: #063708;;
     border-radius: 3rem;
 }
 
@@ -42,7 +42,6 @@ main {
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .container {
@@ -60,9 +59,7 @@ main {
 .textBox {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     width: 100%;
-    /* height: 50%; */
     justify-content: space-between;
 }
 
@@ -72,6 +69,7 @@ main {
     background-color: #808080;
     resize: none;
     width: 49%;
+    color:#063708;
 }
 
 .selectionBox {
@@ -119,9 +117,6 @@ main {
     background-color: #808080;
     width: 20%;
     height: auto;
-}
-
-.btnEnviar:hover {
     cursor: pointer;
 }
 
@@ -134,13 +129,13 @@ main {
     font-size: 0.8125em;
     padding-top: 5px;
     padding-bottom: 5px;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
 footer a {
-    text-decoration: none;
-    color: #808080;
+    width: 10%;
+    height: 10%;
 }
 
 .footerFlex {
@@ -151,7 +146,12 @@ footer a {
 
 .footerIcon {
     display: flex;
-    width: 10%;
+    width: 100%;
+}
+
+.footerIcon:hover {
+    background-color: #063708;
+    border-radius: 50%;
 }
 
 @media (max-width: 1920px) {
@@ -175,9 +175,6 @@ footer a {
         height: 500px;
     }
 
-    .fixed-footer {
-        position: relative;
-    }
 }
 
 @media (max-width: 800px) {
@@ -188,6 +185,20 @@ footer a {
 
     .container {
         width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .textHeader {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .textHeader {
+        font-size: 50px;
     }
 }
 
@@ -240,7 +251,7 @@ footer a {
     }
 
     .textBox {
-        height: 420px;
+        height: 320px;
     }
 
     .typeClass {
